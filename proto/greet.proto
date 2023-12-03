@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "/proto";
+
+package deepak_greet_service;
+
+service deepak_greeter {
+    rpc SayHelloToDeepak (DeepakHelloRequest) returns (DeepakHelloResponse);
+}
+
+message DeepakHelloRequest {
+    string name = 1;
+}
+
+message DeepakHelloResponse{
+    string greeting = 1;
+}
